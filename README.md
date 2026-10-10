@@ -36,7 +36,7 @@
 
 ### Шаг 1. Скачай
 
-Открой страницу **[Releases](https://github.com/1ROST1/Diktor/releases/latest)** и нажми на файл **`Diktor-1.0.dmg`** (номер может быть новее). Он скачается в «Загрузки».
+Открой страницу **[Releases](https://github.com/1ROST1/Diktor/releases/latest)** и нажми на файл **`Diktor-x.x.dmg`** (самая новая версия). Он скачается в «Загрузки».
 
 ### Шаг 2. Перетащи в «Программы»
 
