@@ -7,10 +7,9 @@ Diktor использует следующие компоненты с откр�
 | [FluidAudio](https://github.com/FluidInference/FluidAudio) (FluidInference) | Apache-2.0 | встроен в приложение — запуск Parakeet через Core ML |
 | [text-processing-rs / NemoTextProcessing](https://github.com/FluidInference/text-processing-rs) | Apache-2.0 | встроен (зависимость FluidAudio) |
 | fastcluster, vbx и др. (сторонние части FluidAudio) | см. ниже | встроены (зависимость FluidAudio) |
-| [ONNX Runtime](https://github.com/microsoft/onnxruntime) (Microsoft) | MIT | встроен — запуск GigaAM |
-| [onnx-asr](https://github.com/istupakov/onnx-asr) (Ilya Stupakov) | MIT | встроен файл препроцессора GigaAM |
-| [GigaAM v3](https://github.com/salute-developers/GigaAM) (SaluteDevices / Сбер), [ONNX-версия](https://huggingface.co/istupakov/gigaam-v3-onnx) | MIT | модель скачивается при первом запуске |
-| [NVIDIA Parakeet TDT 0.6B v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3), [Core ML-версия](https://huggingface.co/FluidInference/parakeet-tdt-0.6b-v3-coreml) | CC-BY-4.0 | модель скачивается по выбору пользователя |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp) (ggml authors) | MIT | встроен llama-server — запуск модели умной чистки |
+| [Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B) (Alibaba Qwen), [GGUF-версия](https://huggingface.co/unsloth/Qwen3.5-2B-GGUF) (Unsloth) | Apache-2.0 | модель скачивается при первом запуске (умная чистка) |
+| [NVIDIA Parakeet TDT 0.6B v3](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3), [Core ML-версия](https://huggingface.co/FluidInference/parakeet-tdt-0.6b-v3-coreml) | CC-BY-4.0 | модель скачивается при первом запуске |
 
 ---
 
@@ -1319,84 +1318,34 @@ Apache License 2.0.
    limitations under the License.
 ```
 
-## ONNX Runtime — MIT
-
-```
-MIT License
-
-Copyright (c) Microsoft Corporation
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## onnx-asr — MIT
-
-```
-MIT License
-
-Copyright (c) 2025 Ilya Stupakov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## GigaAM — MIT
-
-```
-MIT License
-
-Copyright (c) 2024 GigaChat Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
 ## NVIDIA Parakeet TDT 0.6B v3 — CC-BY-4.0
 
 Модель распространяется NVIDIA по лицензии Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/
+
+---
+
+## llama.cpp — MIT License
+
+```
+MIT License
+
+Copyright (c) 2023-2026 The ggml authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
